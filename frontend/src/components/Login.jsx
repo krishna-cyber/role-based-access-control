@@ -22,7 +22,7 @@ const Login = () => {
             <input
               className=' bg-slate-100 outline-none p-2 rounded-md'
               type='text'
-              name=''
+              name='email'
               id='username'
               required
               value={email}
@@ -34,7 +34,7 @@ const Login = () => {
             <input
               className=' bg-slate-100 outline-none p-2 rounded-md'
               type='password'
-              name=''
+              name='password'
               id=''
               required
               value={password}

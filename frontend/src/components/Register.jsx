@@ -7,6 +7,7 @@ const Register = () => {
   const [cPassword, setCpassword] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(e.target.value);
   };
   return (
     <>
@@ -23,7 +24,7 @@ const Register = () => {
             <input
               className=' bg-slate-100 outline-none p-2 rounded-md'
               type='text'
-              name=''
+              name='email'
               id='username'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -34,7 +35,7 @@ const Register = () => {
             <input
               className=' bg-slate-100 outline-none p-2 rounded-md'
               type='password'
-              name=''
+              name='password'
               id=''
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -45,7 +46,7 @@ const Register = () => {
             <input
               className=' bg-slate-100 outline-none p-2 rounded-md'
               type='password'
-              name=''
+              name='cPassword'
               id=''
               value={cPassword}
               onChange={(e) => setCpassword(e.target.value)}
