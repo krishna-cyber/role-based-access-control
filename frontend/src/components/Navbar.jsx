@@ -1,5 +1,6 @@
 import React from "react";
 import Main from "./Main";
+import Page404 from "./Page404";
 
 const Navbar = () => {
   return (
@@ -13,6 +14,7 @@ const Navbar = () => {
         </ul>
       </nav>
       <Main />
+      <Page404 />
     </>
   );
 };
