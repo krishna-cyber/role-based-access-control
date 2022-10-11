@@ -18,7 +18,7 @@ const Register = () => {
           onSubmit={handleSubmit}>
           <div className='form-content p-8 flex flex-col gap-3'>
             <label htmlFor='' className=' font-semibold'>
-              Email/Username:
+              Email/Username: <span className='text-red-500'>*</span>
             </label>
             <input
               className=' bg-slate-100 outline-none p-2 rounded-md'
@@ -29,7 +29,7 @@ const Register = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
             <label className=' font-semibold' htmlFor=''>
-              Password:
+              Password: <span className='text-red-500'>*</span>
             </label>
             <input
               className=' bg-slate-100 outline-none p-2 rounded-md'
@@ -40,7 +40,7 @@ const Register = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
             <label className=' font-semibold' htmlFor=''>
-              Confirm Password:
+              Confirm Password: <span className='text-red-500'>*</span>
             </label>
             <input
               className=' bg-slate-100 outline-none p-2 rounded-md'

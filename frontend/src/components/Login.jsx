@@ -17,24 +17,26 @@ const Login = () => {
           className=' border-solid border-[2px] border-slate-400 w-[50%] rounded-xl mt-4'>
           <div className='form-content p-8 flex flex-col gap-3'>
             <label htmlFor='' className=' font-semibold'>
-              Email/Username:
+              Email/Username: <span className='text-red-500'>*</span>
             </label>
             <input
               className=' bg-slate-100 outline-none p-2 rounded-md'
               type='text'
               name=''
               id='username'
+              required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             <label className=' font-semibold' htmlFor=''>
-              Password:
+              Password: <span className='text-red-500'>*</span>
             </label>
             <input
               className=' bg-slate-100 outline-none p-2 rounded-md'
               type='password'
               name=''
               id=''
+              required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
