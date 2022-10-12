@@ -10,12 +10,12 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (password !== cPassword) {
-      toast.error("Error!!Passwords must be same", {
+      toast.error("Error! 😓 Passwords must be  same", {
         icon: "⚠️",
-        className: " bg-red-500 text-white font-medium text-lg",
+        className: " bg-red-400 text-white font-medium text-lg",
       });
     } else {
-      toast.success("Registration successfully!!", {
+      toast.success("Congratulation 🎊 Registration successfully!!", {
         icon: "✅",
         className: " bg-green-400 text-white font-medium text-lg",
       });
