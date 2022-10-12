@@ -6,17 +6,21 @@ specifiers:
   '@vitejs/plugin-react': ^2.1.0
   autoprefixer: ^10.4.12
   axios: ^1.1.2
+  npm: ^8.19.2
   postcss: ^8.4.17
   react: ^18.2.0
   react-dom: ^18.2.0
+  react-hot-toast: ^2.4.0
   react-router-dom: ^6.4.2
   tailwindcss: ^3.1.8
   vite: ^3.1.0
 
 dependencies:
   axios: 1.1.2
+  npm: 8.19.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-hot-toast: 2.4.0_biqbaboplfbrettd7655fr4n2y
   react-router-dom: 6.4.2_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
@@ -926,6 +930,12 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
+  /goober/2.1.11:
+    resolution: {integrity: sha512-5SS2lmxbhqH0u9ABEWq7WPU69a4i2pYcHeCxqaNq6Cw3mnrF0ghWNM4tEGid4dKy8XNIAUbuThuozDHHKJVh3A==}
+    peerDependencies:
+      csstype: ^3.0.10
+    dev: false
+
   /has-flag/3.0.0:
     resolution: {integrity: sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw==}
     engines: {node: '>=4'}
@@ -1055,6 +1065,87 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /npm/8.19.2:
+    resolution: {integrity: sha512-MWkISVv5f7iZbfNkry5/5YBqSYJEDAKSJdL+uzSQuyLg+hgLQUyZynu3SH6bOZlvR9ZvJYk2EiJO6B1r+ynwHg==}
+    engines: {node: ^12.13.0 || ^14.15.0 || >=16}
+    hasBin: true
+    dev: false
+    bundledDependencies:
+      - '@isaacs/string-locale-compare'
+      - '@npmcli/arborist'
+      - '@npmcli/ci-detect'
+      - '@npmcli/config'
+      - '@npmcli/fs'
+      - '@npmcli/map-workspaces'
+      - '@npmcli/package-json'
+      - '@npmcli/promise-spawn'
+      - '@npmcli/run-script'
+      - abbrev
+      - archy
+      - cacache
+      - chalk
+      - chownr
+      - cli-columns
+      - cli-table3
+      - columnify
+      - fastest-levenshtein
+      - fs-minipass
+      - glob
+      - graceful-fs
+      - hosted-git-info
+      - ini
+      - init-package-json
+      - is-cidr
+      - json-parse-even-better-errors
+      - libnpmaccess
+      - libnpmdiff
+      - libnpmexec
+      - libnpmfund
+      - libnpmhook
+      - libnpmorg
+      - libnpmpack
+      - libnpmpublish
+      - libnpmsearch
+      - libnpmteam
+      - libnpmversion
+      - make-fetch-happen
+      - minimatch
+      - minipass
+      - minipass-pipeline
+      - mkdirp
+      - mkdirp-infer-owner
+      - ms
+      - node-gyp
+      - nopt
+      - npm-audit-report
+      - npm-install-checks
+      - npm-package-arg
+      - npm-pick-manifest
+      - npm-profile
+      - npm-registry-fetch
+      - npm-user-validate
+      - npmlog
+      - opener
+      - p-map
+      - pacote
+      - parse-conflict-json
+      - proc-log
+      - qrcode-terminal
+      - read
+      - read-package-json
+      - read-package-json-fast
+      - readdir-scoped-modules
+      - rimraf
+      - semver
+      - ssri
+      - tar
+      - text-table
+      - tiny-relative-date
+      - treeverse
+      - validate-npm-package-name
+      - which
+      - write-file-atomic
+
   /object-hash/3.0.0:
     resolution: {integrity: sha512-RSn9F68PjH9HqtltsSnqYC1XXoWe9Bju5+213R98cNGttag9q9yAOTzdbsqvIa7aNm5WffBZFpWYr2aWrklWAw==}
     engines: {node: '>= 6'}
@@ -1169,6 +1260,20 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-hot-toast/2.4.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-qnnVbXropKuwUpriVVosgo8QrB+IaPJCpL8oBI6Ov84uvHZ5QQcTp2qg6ku2wNfgJl6rlQXJIQU5q+5lmPOutA==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+    dependencies:
+      goober: 2.1.11
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    transitivePeerDependencies:
+      - csstype
     dev: false
 
   /react-refresh/0.14.0:
