@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 router.get("/", (req, res) => {
-  res.send("Good morning!");
+  res.send("hello world");
 });
 
 router.post("/login", (req, res) => {

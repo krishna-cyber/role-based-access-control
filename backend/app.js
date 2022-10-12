@@ -3,9 +3,13 @@ const app = express();
 const cors = require("cors");
 const routes = require("./routes/routes");
 var createError = require("http-errors");
+const mongoose = require("mongoose");
+require("dotenv").config();
+require("./models/dbconnection"); //Database connection file
 
 app.use(cors());
-require("dotenv").config();
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.use(routes);
 
