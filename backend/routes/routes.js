@@ -12,4 +12,8 @@ router.post("/register", (req, res) => {
   res.send("Registration successful!");
 });
 
+router.get("/logout", (req, res) => {
+  res.send("Logout successful!");
+});
+
 module.exports = router;
