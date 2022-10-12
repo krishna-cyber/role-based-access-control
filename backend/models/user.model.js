@@ -24,12 +24,15 @@ const userSchema = new Schema(
 
 userSchema.pre("save", async function (next) {
   console.log("just before saving");
+  try {
+    const rounds = 10; // What you want number for round paasword
 
-  const rounds = 10; // What you want number for round paasword
-
-  const hash = await bcrypt.hash(this.password, rounds);
-  this.password = hash;
-  next();
+    const hash = await bcrypt.hash(this.password, rounds);
+    this.password = hash;
+    next();
+  } catch (error) {
+    next(error);
+  }
 });
 
 const User = mongoose.model("User", userSchema);
