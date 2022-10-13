@@ -14,8 +14,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(routes);
 //error handling middleware
 
-app.all("*", (req, res) => {
-  res.json(createError(454, "Page not found"));
+app.use((req, res, next) => {
+  next(createError.NotFound());
+});
+
+app.use((err, req, res, next) => {
+  res.status(err.status || 500);
+  res.json({
+    error: {
+      status: err.status || 500,
+      message: err.message,
+    },
+  });
 });
 
 app.listen(process.env.PORT, () => {
