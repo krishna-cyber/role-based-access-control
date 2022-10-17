@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const bcrypt = require("bcrypt");
+const createHttpError = require("http-errors");
 
 const userSchema = new Schema(
   {
@@ -25,7 +26,7 @@ const userSchema = new Schema(
 userSchema.pre("save", async function (next) {
   console.log("just before saving");
   try {
-    const rounds = 10; // What you want number for round paasword
+    const rounds = 10; // What you want number for round password
 
     const hash = await bcrypt.hash(this.password, rounds);
     this.password = hash;
@@ -34,6 +35,15 @@ userSchema.pre("save", async function (next) {
     next(error);
   }
 });
+
+//compare password
+userSchema.methods.matchPassword = async function (password) {
+  try {
+    return await bcrypt.compare(password, this.password);
+  } catch (error) {
+    throw createHttpError.InternalServerError();
+  }
+};
 
 const User = mongoose.model("User", userSchema);
 
