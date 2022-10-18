@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+require("./utils/passport.auth");
 const cors = require("cors");
 const routes = require("./routes/routes");
 var createError = require("http-errors");
