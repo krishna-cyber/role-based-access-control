@@ -1,15 +1,27 @@
 const express = require("express");
 const app = express();
-require("./utils/passport.auth");
+
 const cors = require("cors");
 const routes = require("./routes/routes");
 var createError = require("http-errors");
 const mongoose = require("mongoose");
+const { auth } = require("express-openid-connect");
 require("dotenv").config();
 require("./models/dbconnection"); //Database connection file
 
 //Middleware
 app.use(cors());
+// index.js
+
+app.use(
+  auth({
+    issuerBaseURL: process.env.ISSUER_BASE_URL,
+    baseURL: process.env.BASE_URL,
+    clientID: process.env.CLIENT_ID,
+    secret: process.env.SECRET,
+    idpLogout: true,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(routes);

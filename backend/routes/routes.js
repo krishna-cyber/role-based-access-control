@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 const passport = require("passport");
 const User = require("../models/user.model");
 router.get("/", (req, res) => {
-  res.send("hello world");
+  res.send(req.oidc.isAuthenticated() ? "Logged in" : "Logged out");
 });
 
 router.post("/login", (req, res, next) => {
